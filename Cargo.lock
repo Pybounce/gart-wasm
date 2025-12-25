@@ -20,7 +20,7 @@ dependencies = [
 [[package]]
 name = "bytecode_vm"
 version = "0.1.0"
-source = "git+https://github.com/Pybounce/bytecode_vm#b2fb125087e83ea34dd57000b1be4295ec2b44f1"
+source = "git+https://github.com/Pybounce/bytecode_vm#81381cce19466e0b543595f3d0bb6bb356df573a"
 
 [[package]]
 name = "cfg-if"
