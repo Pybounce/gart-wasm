@@ -10,11 +10,19 @@ pub struct WasmVm {
 }
 
 #[wasm_bindgen]
-#[derive(Clone)]
 pub struct CompilerErr {
     pub line: usize,
     pub start: usize,
-    pub len: usize
+    pub len: usize,
+    message: String
+}
+
+#[wasm_bindgen]
+impl CompilerErr {
+    #[wasm_bindgen(getter)]
+    pub fn message(&self) -> String {
+        self.message.clone()
+    }
 }
 
 #[wasm_bindgen]
@@ -72,10 +80,11 @@ impl CompileResult {
         Self {
             success: false,
             vm: None,
-            compile_errors: Some(errors.iter().map(|i| { CompilerErr {
+            compile_errors: Some(errors.into_iter().map(|i| { CompilerErr {
                 line: i.line,
                 start: i.start,
-                len: i.len
+                len: i.len,
+                message: i.message
             }}).collect()),
         }
     }
