@@ -9,29 +9,29 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5dd9dc738b7a8311c7ade152424974d8115f2cdad61e8dab8dac9f2362298510"
 
 [[package]]
-name = "bytecode-wasm"
+name = "cfg-if"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
+
+[[package]]
+name = "gart"
+version = "0.1.0"
+source = "git+https://github.com/Pybounce/gart#79e62097e83987e681bc68773d51213d52988361"
+dependencies = [
+ "rand",
+]
+
+[[package]]
+name = "gart-wasm"
 version = "0.1.0"
 dependencies = [
- "bytecode_vm",
+ "gart",
  "getrandom",
  "js-sys",
  "rand",
  "wasm-bindgen",
 ]
-
-[[package]]
-name = "bytecode_vm"
-version = "0.1.0"
-source = "git+https://github.com/Pybounce/bytecode_vm#949da8b88d8e000ff027c53ed5a408c0ed075398"
-dependencies = [
- "rand",
-]
-
-[[package]]
-name = "cfg-if"
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
 
 [[package]]
 name = "getrandom"

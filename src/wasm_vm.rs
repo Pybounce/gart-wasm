@@ -1,8 +1,8 @@
-use bytecode_vm::{NativeFunction, Value};
+use gart::{NativeFunction, Value};
 use js_sys::{Array, Date};
 use wasm_bindgen::prelude::*;
-use bytecode_vm::interpreter::Interpreter;
-use bytecode_vm::interpreter::{CompilerError, RuntimeError};
+use gart::interpreter::Interpreter;
+use gart::interpreter::{CompilerError, RuntimeError};
 
 #[wasm_bindgen]
 pub struct WasmVm {

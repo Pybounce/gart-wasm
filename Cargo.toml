@@ -1,5 +1,5 @@
 [package]
-name = "bytecode-wasm"
+name = "gart-wasm"
 version = "0.1.0"
 edition = "2024"
 
@@ -8,7 +8,7 @@ edition = "2024"
 crate-type = ["cdylib"]
 
 [dependencies]
-bytecode_vm = { git = "https://github.com/Pybounce/bytecode_vm" }
+gart = { git = "https://github.com/Pybounce/gart" }
 js-sys = "0.3.83"
 wasm-bindgen = "0.2.106"
 rand = { version = "0.9", features = ["os_rng"] } 
